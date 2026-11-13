@@ -1,0 +1,14 @@
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Strict-Transport-Security: max-age=31536000
+/images/*
+  Cache-Control: public, max-age=2592000
+/styles.css
+  Cache-Control: public, max-age=86400
+/main.js
+  Cache-Control: public, max-age=86400
+/api/*
+  X-Robots-Tag: noindex
