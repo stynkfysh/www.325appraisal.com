@@ -21,7 +21,12 @@
   var status = params.get('status');
   var ok = document.getElementById('form-success');
   var err = document.getElementById('form-error');
-  if (status === 'success' && ok) { ok.style.display = 'block'; form.style.display = 'none'; ok.scrollIntoView({ block: 'center' }); }
+  if (status === 'success' && ok) {
+    ok.style.display = 'block'; form.style.display = 'none';
+    var card = form.closest('.form-card');
+    if (card) card.querySelectorAll('h2').forEach(function (h) { h.style.display = 'none'; });
+    ok.scrollIntoView({ block: 'center' });
+  }
   if (status === 'error' && err) { err.style.display = 'block'; err.scrollIntoView({ block: 'center' }); }
 
   // Pre-fill from links such as /contact?purpose=divorce or /contact?city=Carlsbad
